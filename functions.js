@@ -1,13 +1,18 @@
-var getDieRoll = function(dieSize, var2, var3){
+var getDieRoll = function(dieSize){
 	console.log("rolling a die");
-	return Math.ceil(dieSize*Math.random())
+	var result = Math.ceil(dieSize*Math.random());
+	return result;
+};
+
+var showResult = function(){
+	console.log(firstDie);
+	console.log(secondDie);
+	console.log(firstDie + secondDie);
+
 };
 
 var firstDie = getDieRoll(10);
-
-console.log(firstDie);
-
 var secondDie = getDieRoll(3);
-console.log(secondDie);
-console.log(firstDie + secondDie);
+showResult();
+
 
