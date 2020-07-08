@@ -5,6 +5,11 @@ var getDieRoll = function(dieSize){
 };
 var roll = getDieRoll(6);
 
+for(var i = 0; i < 5; i += 1){
+	console.log(roll);
+	roll = getDieRoll(6);
+}
+
 while(roll < 4){
 	console.log(roll);
 	roll = getDieRoll(6); 	
