@@ -1,11 +1,16 @@
-//var lunch = 'pizza'; console.log(4);
-//console.log(lunch);
-var totalCost = 14.99;
+var getDieRoll = function(dieSize){
+	var result = Math.ceil(dieSize*Math.random());
+	return result;
+};
 
-var sizeOfParty = process.argv[2];
+var die = {
+	size: 4,
+	count: 1,
+	roll: function(dieSize){
+		var result = Math.ceil(dieSize*Math.random());
+		return result;
+	}
+};
 
-var averageCost = totalCost / sizeOfParty;
-
-console.log("$"+averageCost);
-//console.log(process.argv);
-//var sizeOfParty = process.title
+console.log(die);
+console.log(die.roll(6));
