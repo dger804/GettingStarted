@@ -1,8 +1,9 @@
 var dice = require("./dice");
 var die = dice.die;
 
-die.size = 10;
+console.log(dice.name);
 
+die.size = 10;
 console.log(die.roll());
 console.log(die.roll());
 console.log(die.roll());
