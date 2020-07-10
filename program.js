@@ -4,13 +4,19 @@ var getDieRoll = function(dieSize){
 };
 
 var die = {
-	size: 4,
-	count: 1,
+	size: 6,
+	totalRolls: 0,
 	roll: function(dieSize){
-		var result = Math.ceil(dieSize*Math.random());
+		var result = Math.ceil(this.size*Math.random());
+		this.totalRolls += 1;
 		return result;
 	}
 };
-
+die.size = 10;
 console.log(die);
-console.log(die.roll(6));
+console.log(die.roll());
+console.log(die.roll());
+console.log(die.roll());
+console.log("Total Rolls: "+die.totalRolls);
+console.log(die);
+
