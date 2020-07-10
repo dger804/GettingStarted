@@ -1,6 +1,11 @@
 var book = require("./lib/grades").book;
 
-for (var i = 2; i < process.argv.length; i += 1){
-	book.addGrade(parseInt(process.argv[i]));
-}
-console.log(book.getAverage());
+var express = require("express");
+var app = express();
+
+app.get("/", function(req, res){
+	res.send("Hello, world!");
+});
+
+app.listen(3000);
+console.log("Server ready...");
